@@ -38,3 +38,8 @@ jobs:
       with:
        host: ${{ secrets.SONARQUBE_HOST }}
        Login: ${{ secrets.SONARQUBE_TOKEN }}
+      run: mvn clean verify sonar:sonar \
+        -Dsonar.projectKey=your_project_key \
+        -Dsonar.host.url=http://13.239.132.234:9000/ \
+        -Dsonar.login=$SONARQUBE_TOKEN \
+        -Dsonar.java.binaries=target/classes
