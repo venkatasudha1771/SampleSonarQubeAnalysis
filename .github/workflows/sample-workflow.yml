@@ -44,4 +44,6 @@ jobs:
         -Dsonar.organization=piomin \
         -Dsonar.host.url=https://sonarcloud.io \
         -Dsonar.login=$SONAR_TOKEN \
-        -Dsonar.java.binaries=person-service/target/classes
+        -Dsonar.modules=person-service \
+        -Dsonar.java.binaries=person-service/target/classes \
+        -Dsonar.exclusions=sonar-plugins/**

@@ -13,6 +13,7 @@
 
     <properties>
         <java.version>21</java.version>
+        <sonar.exclusions>sonar-plugins/**</sonar.exclusions>
         <sonar.projectKey>piomin_sample-java-sonar</sonar.projectKey>
         <sonar.organization>piomin</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
