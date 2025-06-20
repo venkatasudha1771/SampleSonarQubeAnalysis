@@ -39,8 +39,7 @@ jobs:
        host: ${{ secrets.SONARQUBE_HOST }}
        Login: ${{ secrets.SONARQUBE_TOKEN }}
     - name: SET SONAR AUTHENTICATION
-      run: mvn clean verify sonar:sonar -X \
+      run: mvn sonar:sonar -X \
         -Dsonar.projectKey=${{ github.repository }}-${{ github.ref_name }} \
         -Dsonar.host.url=SONARQUBE_HOST \
-        -Dsonar.login=$SONARQUBE_TOKEN \
-        -Dsonar.java.binaries=target/classes
+        -Dsonar.login=$SONARQUBE_TOKEN
