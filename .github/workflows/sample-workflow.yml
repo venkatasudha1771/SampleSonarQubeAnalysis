@@ -42,8 +42,8 @@ jobs:
       run: mvn sonar:sonar -X \
         -Dsonar.projectKey=piomin_sample-java-sonar \
         -Dsonar.organization=piomin \
-        -Dsonar.host.url=https://sonarcloud.io \
-        -Dsonar.login=$SONAR_TOKEN \
+        -Dsonar.host.url=$SONARQUBE_HOST \
+        -Dsonar.login=$SONARQUBE_TOKEN \
         -Dsonar.modules=person-service \
         -Dsonar.java.binaries=person-service/target/classes \
         -Dsonar.exclusions=sonar-plugins/**
